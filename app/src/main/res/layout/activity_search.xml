@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity"
+    android:orientation="vertical"
+    android:background="@color/grey">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/grey">
+
+        <ImageView
+            android:id="@+id/search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/search_back"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:onClick="onClick" />
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:theme="@style/SearchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBaseline="@id/search_back"
+            android:padding="5dp"
+            android:layout_toEndOf="@id/search_back"
+            android:layout_toRightOf="@id/search_back"
+            android:hint="@string/search"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:paddingTop="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/grey_record"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            tools:ignore="RtlSymmetry"
+            android:layout_marginEnd="10dp">
+
+            <requestFocus />
+        </EditText>
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/search_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="6dp"
+        android:layout_margin="10dp"
+        android:divider="@color/grey"/>
+
+    <TextView
+        android:id="@+id/search_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/grey_record"
+        android:textSize="22sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/search_data_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/data_empty"
+        android:textColor="@color/grey_record"
+        android:textSize="22sp"
+        android:textStyle="normal"/>
+
+</LinearLayout>

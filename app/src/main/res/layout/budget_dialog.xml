@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/remark_dialog_bg_white">
+
+    <TextView
+        android:id="@+id/budget_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_budget"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/green"/>
+
+
+    <TextView
+        android:id="@+id/budget_dialog_budget_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/budget_symbol"
+        android:layout_below="@id/budget_dialog_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/grey_record" />
+
+    <EditText
+        android:id="@+id/budget_dialog_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        android:textColor="@color/grey_record"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:background="@color/white"
+        android:layout_below="@+id/budget_dialog_title"
+        android:layout_toRightOf="@+id/budget_dialog_budget_symbol"
+        android:layout_toEndOf="@+id/budget_dialog_budget_symbol"
+        android:layout_alignBaseline="@id/budget_dialog_budget_symbol"
+        android:inputType="numberDecimal">
+        <requestFocus/>
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/budget_dialog_edit"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/budget_dialog_btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:background="@drawable/btn_bg_white"
+            android:textStyle="normal"
+            android:layout_marginRight="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
+
+        <Button
+            android:id="@+id/budget_dialog_btn_ensure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ensure"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:background="@drawable/btn_bg_blue"
+            android:textStyle="normal"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

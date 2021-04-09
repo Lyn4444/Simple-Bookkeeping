@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Tally</string>
+    <string name="main_edit">记一笔</string>
+    <string name="month_in">本月收入</string>
+    <string name="month_out">本月支出</string>
+    <string name="month_budget">本月预算</string>
+    <string name="set_budget">设置预算</string>
+    <string name="budget">预算剩余</string>
+    <string name="visual">可视化分析</string>
+    <string name="today">今日支出：num1 今日收入：num2</string>
+    <string name="record_fragment_out_edit_time">时间</string>
+    <string name="record_fragment_in_edit_time">时间</string>
+    <string name="remark_title">备注</string>
+    <string name="add_remark">添加备注</string>
+    <string name="ensure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="budget_symbol">￥</string>
+    <string name="search">搜索</string>
+    <string name="data_empty">查无记录，请重新输入</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="list_title">账单记录</string>
+    <string name="list_now">本月账单记录</string>
+    <string name="detail_title">账单详情</string>
+    <string name="out">支出</string>
+    <string name="in">收入</string>
+    <string name="chart_data_empty">暂无数据</string>
+    <string name="setting">设置</string>
+    <string name="setting_clear">删除所有记录</string>
+    <string name="about">关于</string>
+    <string name="about_about">About</string>
+    <string name="version">Version 2.1.1</string>
+    <string name="completeTime">21/4/1 — 21/4/9</string>
+</resources>

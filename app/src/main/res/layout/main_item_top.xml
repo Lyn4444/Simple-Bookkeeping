@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/main_item_top_month_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/month_out"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/main_item_top_cost_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/main_item_top_month_out"/>
+        <ImageView
+            android:id="@+id/main_item_top_ih_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/ih_show"
+            android:layout_alignTop="@id/main_item_top_cost_out"/>
+        <TextView
+            android:id="@+id/main_item_top_month_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/month_in"
+            android:layout_below="@id/main_item_top_cost_out"/>
+        <TextView
+            android:id="@+id/main_item_top_month_setBudget_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/month_budget"
+            android:layout_below="@id/main_item_top_month_in"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/main_item_top_cost_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@id/main_item_top_cost_out"
+            android:layout_toRightOf="@id/main_item_top_month_in"
+            android:layout_toEndOf="@id/main_item_top_month_in"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp" />
+        <TextView
+            android:id="@+id/main_item_top_month_setBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/budget_symbol"
+            android:layout_below="@id/main_item_top_month_in"
+            android:layout_toRightOf="@id/main_item_top_month_setBudget_title"
+            android:layout_toEndOf="@id/main_item_top_month_setBudget_title"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_alignBaseline="@id/main_item_top_month_setBudget_title"/>
+        <TextView
+            android:id="@+id/main_item_top_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/main_item_top_month_setBudget_title"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/main_item_top_rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/main_item_top_month_setBudget_title"
+            android:layout_toLeftOf="@id/main_item_top_budget"
+            android:text="@string/budget"
+            android:layout_toStartOf="@id/main_item_top_budget" />
+
+        <TextView
+            android:id="@+id/main_item_top_visual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ih_biaoge"
+            android:drawableStart="@mipmap/ih_biaoge"
+            android:layout_below="@id/main_item_top_month_setBudget_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/visual"
+            android:textColor="@color/dark_green"
+            android:drawablePadding="10dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/main_item_top_today"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/today"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"/>
+
+</LinearLayout>

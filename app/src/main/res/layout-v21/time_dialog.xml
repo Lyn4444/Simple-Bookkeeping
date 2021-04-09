@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <DatePicker
+        android:id="@+id/time_dialog_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:calendarTextColor="@color/pink"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        tools:ignore="RtlHardcoded">
+
+        <Button
+            android:id="@+id/time_dialog_cancel"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textColor="@color/grey_record"
+            android:background="@null"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp" />
+        <Button
+            android:id="@+id/time_dialog_ensure"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ensure"
+            android:textColor="@color/blue"
+            android:background="@null"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp" />
+    </LinearLayout>
+
+
+</LinearLayout>
