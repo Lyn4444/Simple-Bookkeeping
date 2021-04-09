@@ -25,17 +25,21 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
 
     TextView clearText, aboutText;
 
+    View view;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_setting, container, false);
+        view = inflater.inflate(R.layout.fragment_setting, container, false);
+
 
         initView(view);
 
 
         return view;
     }
+
 
     private void initView(View view) {
 

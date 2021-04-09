@@ -3,6 +3,7 @@ package com.example.simplebookkeeping.fragment;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -48,14 +49,14 @@ public abstract class ChartBaseFragment extends Fragment {
 
     Calendar calendar;
 
+    @SuppressLint("InflateParams")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_chart_base, container, false);
 
-        initView(view);
-
+        initView();
         chartBeanList = new ArrayList<>();
 
         adapter = new ChartItemAdapter(getContext(), chartBeanList);
@@ -63,20 +64,23 @@ public abstract class ChartBaseFragment extends Fragment {
 
         initLineChartView();
 
+
         return view;
     }
 
+
     @SuppressLint("InflateParams")
-    private void initView(View view) {
+    private void initView() {
         chartListView = view.findViewById(R.id.chart_listView);
+
+        headerView = LayoutInflater.from(getActivity()).inflate(R.layout.chart_item_top, null);
 
         Bundle bundle = getArguments();
         assert bundle != null;
         year = bundle.getInt("year");
         month = bundle.getInt("month");
 
-        //        布局转View对象
-        headerView = LayoutInflater.from(getActivity()).inflate(R.layout.chart_item_top, null);
+
 
         chartListView.addHeaderView(headerView);
         lineChart = headerView.findViewById(R.id.chart_item_LineChart);

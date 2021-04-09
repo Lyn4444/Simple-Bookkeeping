@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.example.simplebookkeeping",
+  "variantName": "processReleaseResources",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 1,
+      "versionName": "2.1.2",
+      "outputFile": "tally_com.example.simplebookkeeping_v2.1.2_2021_04_09_release.apk"
+    }
+  ]
+}

@@ -31,6 +31,8 @@ public class ListFragment extends Fragment implements View.OnClickListener {
     TextView historyView, nowView;
     ImageView calender;
 
+    View view;
+
     List<AccountBean> accountBeanList;
     MainListAdapter listAdapter;
 
@@ -42,7 +44,7 @@ public class ListFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_list, container, false);
+        view = inflater.inflate(R.layout.fragment_list, container, false);
 
         listView = view.findViewById(R.id.list_listView);
         historyView = view.findViewById(R.id.list_history);
@@ -64,6 +66,7 @@ public class ListFragment extends Fragment implements View.OnClickListener {
 
         return view;
     }
+
 
     @SuppressLint("SetTextI18n")
     @Override

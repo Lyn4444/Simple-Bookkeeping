@@ -29,6 +29,7 @@ import com.example.simplebookkeeping.adapter.MainListAdapter;
 import com.example.simplebookkeeping.db.AccountBean;
 import com.example.simplebookkeeping.db.DBManager;
 import com.example.simplebookkeeping.utils.BudgetDialog;
+import com.example.simplebookkeeping.utils.FloatDecimalFormat;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -36,7 +37,6 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- *
  * The Home Fragment Of Main Fragment.
  */
 public class HomeFragment extends Fragment implements View.OnClickListener {
@@ -48,9 +48,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     List<AccountBean> accountBeanList;
     MainListAdapter mainListAdapter;
     int year, month, day;
-    View mainListHeaderView;
+    View mainListHeaderView, view;
 
-    TextView headerOutView, headerInView, headerSetBudgetView, headerBudgetView, headerTodayView;
+    TextView headerOutView, headerInView, headerSetBudgetView, headerBudgetView, headerTodayView, visualView;
     ImageView isShowView;
 
     //    共享参数保存预算数值
@@ -64,7 +64,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        view = inflater.inflate(R.layout.fragment_home, container, false);
+
 
         initView(view);
 
@@ -81,6 +82,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         return view;
     }
+
 
     private void initView(View view) {
         initComponent(view);
@@ -123,10 +125,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         headerBudgetView = mainListHeaderView.findViewById(R.id.main_item_top_budget);
         headerTodayView = mainListHeaderView.findViewById(R.id.main_item_top_today);
         isShowView = mainListHeaderView.findViewById(R.id.main_item_top_ih_show);
+        visualView = mainListHeaderView.findViewById(R.id.main_item_top_visual);
 
         mainListHeaderView.setOnClickListener(this);
         headerSetBudgetView.setOnClickListener(this);
         isShowView.setOnClickListener(this);
+        visualView.setOnClickListener(this);
 
         setMainListViewLongClickListener();
     }
@@ -239,11 +243,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
          *
          * 接口回调，把跳转方法交MainActivity重写
          */
-        if (v == mainListHeaderView) {
-            if (onMainListViewClick != null) {
-                onMainListViewClick.onClick();
-            }
-        }
+
         switch (v.getId()) {
             case R.id.main_search:
                 Intent searchIntent = new Intent(getContext(), SearchActivity.class);
@@ -259,6 +259,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.main_item_top_ih_show:
                 isShowData();
+                break;
+            case R.id.main_item_top_visual:
+                if (onMainListViewClick != null) {
+                    onMainListViewClick.onClick();
+                }
                 break;
         }
     }
